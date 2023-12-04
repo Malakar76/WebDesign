@@ -1,0 +1,56 @@
+section {
+    padding: 50px;
+    background: whitesmoke;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+#carousel-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    background: white;
+}
+
+#carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+#prev, #next {
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    cursor: pointer;
+    color: black;
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#prev {
+    left: 10px;
+    z-index: 10;
+}
+
+#next {
+    right: 10px;
+    z-index: 10;
+}
