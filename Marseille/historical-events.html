@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/history.css">
+    <title>Historical Events</title>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li class="has-submenu">
+                <a href="history.html">History</a>
+                <ul class="submenu">
+                    <li><a href="historical-events.html">Historical Events</a></li>
+                    <li><a href="historical-figures.html">Historical Figures</a></li>
+                </ul>
+            </li>
+            <li><a href="sightseeings.html">Sightseeings</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="History">
+    <h1>History Of Marseille</h1>
+
+    <div id="carousel-container" onmouseover="showArrows()" onmouseout="hideArrows()">
+        <button id="prev" onclick="changeSlide(-1)">❮</button>
+        <div id="carousel">
+            <div class="slide">
+                <h2>Foundation and Construction: Ancient Origins</h2>
+                <p>
+                    Marseille, as we know it today, traces its roots back to ancient Greece.
+                    Legend has it that around 600 BCE, Greek sailors from Phocaea, a city in Asia Minor,
+                    founded Massilia on the shores of the Mediterranean. This strategic choice proved crucial, transforming
+                    the city into a major commercial hub due to its ideal position for maritime trade.
+
+                    The port, now known as the Old Port, was the center of economic activity. The Greeks built fortifications
+                    to protect the city from invasions and erected temples dedicated to their gods. Massilia quickly became a key player
+                    in Mediterranean trade, collaborating with various cultures and contributing to the region's wealth.
+                </p>
+                <img src="img/ancient_greek.jpg">
+            </div>
+            <div class="slide">
+                <h2>Massilia through the Centuries: From Antiquity to the Roman Empire</h2>
+                <p>
+                    Over the centuries, Marseille faced numerous challenges, including Celtic invasions and conflicts
+                    with Rome. Around 49 BCE, the city was integrated into the Roman Empire by Julius Caesar after fierce
+                    resistance from the people of Marseille. Roman influence left architectural traces, including theaters and aqueducts,
+                    bearing witness to this period of history.
+
+                    During the Roman Empire, Marseille thrived as a key port, facilitating trade across the Mediterranean.
+                    It became a cultural and intellectual center, attracting thinkers, artists, and merchants
+                    from across the Empire.
+                </p>
+                <img src="img/gaule_massilia.jpg">
+            </div>
+            <div class="slide">
+                <h2>17th and 18th Centuries: Marseille's Golden Age</h2>
+                <p>
+                    The 17th and 18th centuries marked Marseille's golden age. The city prospered through maritime trade,
+                    the growth of the naval industry, and the founding of the famous "Compagnie des Indes" (East India Company).
+                    The Old Port underwent redevelopment, and mansions testified to the wealth of the merchant bourgeoisie.
+                </p>
+                <img src="img/golden_age_massilia.jpg">
+            </div>
+            <div class="slide">
+                <h2>Marseille in the 19th and 20th Centuries: A City in Transition</h2>
+                <p>
+                    The 19th century was marked by the construction of the Basilica of Notre-Dame-de-la-Garde, a symbol of the city.
+                    Marseille continued to grow in the 20th century, becoming a major industrial center and a strategic port. However,
+                    the city also faced social, economic, and political challenges.
+                </p>
+                <img src="img/Marseille_transition.jpg">
+            </div>
+            <div class="slide">
+                <h2>Marseille Today: A Dynamic Metropolis</h2>
+                <p>
+                    Today, Marseille is a modern metropolis that has preserved its heritage while looking to the future.
+                    Historic neighborhoods coexist with contemporary urban projects, making the Phocaean city a dynamic place where
+                    history and modernity harmoniously intersect.
+                </p>
+                <img src="img/Marseille_today.png">
+            </div>
+        </div>
+        <button id="next" onclick="changeSlide(1)">❯</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function changeSlide(n) {
+            console.log("Change slide called");
+            showSlide(currentSlide += n);
+        }
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            if (n >= slides.length) {
+                currentSlide = 0;
+            } else if (n < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = n;
+            }
+
+            document.getElementById('carousel').style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+        }
+
+        function showArrows() {
+            document.getElementById('prev').style.opacity = '1';
+            document.getElementById('next').style.opacity = '1';
+        }
+
+        function hideArrows() {
+            document.getElementById('prev').style.opacity = '0';
+            document.getElementById('next').style.opacity = '0';
+        }
+    </script>
+
+</section>
+
+<footer>
+    <p>&copy; 2023 FIT BUT</p>
+</footer>
+
+</body>
+</html>

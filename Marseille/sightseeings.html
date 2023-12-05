@@ -5,42 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/sightseeings.css">
     <link rel="stylesheet" href="css/landing.css">
-    <title>Home</title>
+    <title>SightSeeings</title>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="landing.html">Home</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="sightseeings.html">Sightseeings</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <ul>
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li class="has-submenu">
+                <a href="history.html">History</a>
+                <ul class="submenu">
+                    <li><a href="historical-events.html">Historical Events</a></li>
+                    <li><a href="historical-figures.html">Historical Figures</a></li>
+                </ul>
+            </li>
+            <li><a href="sightseeings.html">Sightseeings</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <section id="home">
+    <section id="sightseings">
         <h1>Visit the city and its surrounding !</h1>
-<!--Probleme avec le section: inutile mais chamboule tout si on le supprime-->
         <div class="photo-sight">
-
             <figure>
-                <img src="img/frioul.jpg" alt="Le Frioul island">
+                <img class="img_display" src="img/frioul.jpg" alt="Le Frioul island" onclick="toggleCaption(this)" onmouseout="hide_text(this)">
+                <p class="image-caption">
+                    Frioul is an archipelago off the coast of Marseille, in southern France. Renowned for its crystalline
+                    waters, stunning Mediterranean landscapes, and peaceful ambiance, Frioul provides a tranquil escape.
+                    Visitors can enjoy idyllic beaches, scenic hiking trails with panoramic sea views, and secluded coves for
+                    relaxation. The archipelago also holds historical significance, featuring landmarks like Château d'If,
+                    immortalized in Alexandre Dumas' "The Count of Monte Cristo." Whether exploring natural trails, basking on
+                    sunny shores, or delving into cultural heritage, Frioul promises an enchanting experience for those seeking
+                    Mediterranean beauty and serenity.
+                </p>
                 <figcaption class="image_title">Le Frioul island</figcaption>
             </figure>
             <figure>
-                <img src="img/morgiou.jpg" alt="Morgiou creek">
+                <img class="img_display" src="img/morgiou.jpg" alt="Morgiou creek" onclick="toggleCaption(this)" onmouseout="hide_text(this)">
+                <p class="image-caption">
+                    Morgiou Creek is a picturesque enclave situated along the coast of Marseille,
+                    in the southern region of France. Celebrated for its unspoiled natural beauty, the creek boasts
+                    crystalline waters, rugged cliffs, and a tranquil atmosphere. Visitors can relish the serenity of
+                    secluded coves, embark on scenic coastal walks, and immerse themselves in the idyllic Mediterranean
+                    surroundings. With a rich maritime history, Morgiou Creek offers a captivating blend of natural
+                    wonders and cultural heritage. Whether exploring hidden inlets, enjoying coastal vistas, or
+                    discovering the local history, Morgiou Creek provides an immersive and enchanting experience along
+                    the Mediterranean coastline.
+                </p>
                 <figcaption class="image_title">Morgiou creek</figcaption>
             </figure>
             <figure>
-                <img src="img/sormiou.jpg" alt="Sormiou creek">
+                <img class="img_display" src="img/sormiou.jpg" alt="Sormiou creek" onclick="toggleCaption(this)" onmouseout="hide_text(this)">
+                <p class="image-caption">
+                    Sormiou Creek, nestled along the Marseille coastline in southern France, is a captivating haven
+                    renowned for its pristine beauty. With turquoise waters, dramatic cliffs, and a serene ambiance,
+                    Sormiou Creek offers a tranquil escape. Visitors can indulge in the charm of hidden beaches, embark
+                    on scenic coastal hikes, and savor the Mediterranean allure. Steeped in maritime history, Sormiou
+                    Creek presents a harmonious blend of natural splendor and cultural significance. Whether exploring
+                    secluded shores, taking in panoramic views, or delving into local maritime tales, Sormiou Creek
+                    promises an immersive and enchanting experience along the Mediterranean shore.
+                </p>
                 <figcaption class="image_title">Sormiou creek</figcaption>
             </figure>
         </div>
     </section>
+
+    <script>
+        function toggleCaption(img) {
+            var figure = img.parentNode;
+            var caption = figure.querySelector('.image-caption');
+            caption.style.display ="block";
+        }
+
+        function hide_text(img){
+            var figure = img.parentNode;
+            var caption = figure.querySelector('.image-caption');
+            caption.style.display = "none";
+
+
+        }
+    </script>
+
 
     <footer>
         <p>&copy; 2023 FIT BUT</p>

@@ -54,3 +54,27 @@ h1, h2, h3 {
     right: 10px;
     z-index: 10;
 }
+
+.image-container {
+    display: flex;
+    padding: 5%;
+    background: white;
+    margin: 5%;
+}
+
+figure {
+    text-align: center;
+    width: 50%;
+}
+
+.image-container img {
+    width: 110%; /* Ajustez la largeur selon vos besoins */
+    height: 100%;
+    margin-right: 20px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #555;
+}
