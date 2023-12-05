@@ -78,3 +78,43 @@ figcaption {
     font-size: 30px;
     color: #555;
 }
+
+table {
+    width: 60%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto auto 10% auto;
+    background: cadetblue;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.table_img{
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        display: block;
+        border-radius: 10px;
+
+}
+
+#Historical_figures{
+    background-image: url('../img/fond_.jpg');
+    /* Spécifiez comment l'image en arrière-plan doit être affichée */
+    background-size: cover;
+    /* Répétez l'image en arrière-plan horizontalement et verticalement si nécessaire */
+    background-repeat: no-repeat;
+    /* Centrez l'image en arrière-plan */
+    background-position: center center;
+    /* Fixez l'image en arrière-plan pour qu'elle ne défiler pas avec la page */
+    background-attachment: fixed
+
+}
