@@ -1,0 +1,71 @@
+#Services{
+    background-image: url('../img/vieux_port.jpg');
+/* Spécifiez comment l'image en arrière-plan doit être affichée */
+background-size: cover;
+/* Répétez l'image en arrière-plan horizontalement et verticalement si nécessaire */
+background-repeat: no-repeat;
+/* Centrez l'image en arrière-plan */
+background-position: center center;
+/* Fixez l'image en arrière-plan pour qu'elle ne défiler pas avec la page */
+background-attachment: fixed
+
+}
+
+section {
+    padding: 50px;
+    background: whitesmoke;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+#carousel-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    background: white;
+}
+
+#carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.slide img {
+    width: 50%;
+    height: auto;
+
+}
+
+#prev, #next {
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    cursor: pointer;
+    color: black;
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#prev {
+    left: 10px;
+    z-index: 10;
+}
+
+#next {
+    right: 10px;
+    z-index: 10;
+}
