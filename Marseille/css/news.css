@@ -1,7 +1,15 @@
-section {
+#News {
+    background-image: url('../img/background_newspaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#News section {
     padding: 50px;
     background: whitesmoke;
 }
+
 
 h1, h2, h3 {
     color: #333;
